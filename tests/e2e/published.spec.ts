@@ -28,7 +28,7 @@ for (const item of pages) {
     await page.goto(item.route, { waitUntil: 'networkidle' })
     await expect(page.locator('h1')).toHaveCount(1)
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', item.robots)
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`/geo-consulting-website/${item.route}$`))
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`/souheng/${item.route}$`))
     await expect(page.locator('header.site-header')).toBeVisible()
     await expect(page.locator('footer.footer')).toBeVisible()
     await expect(page.locator('body')).toContainText('搜衡科技')
@@ -53,7 +53,7 @@ test('mobile navigation reaches the published service index', async ({ page }, t
   const button = page.getByRole('button', { name: '打开主导航' })
   await button.click()
   await page.getByRole('link', { name: '服务能力' }).click()
-  await expect(page).toHaveURL(/\/geo-consulting-website\/services\/$/)
+  await expect(page).toHaveURL(/\/souheng\/services\/$/)
 })
 
 test('wechat consultation dialog is keyboard accessible', async ({ page }, testInfo) => {
@@ -62,7 +62,7 @@ test('wechat consultation dialog is keyboard accessible', async ({ page }, testI
   await expect(page.getByRole('dialog', { name: '微信咨询' })).toBeVisible()
   const consultQr = page.locator('img[alt="搜衡科技客户微信咨询二维码"]')
   await expect(consultQr).toBeVisible()
-  await expect(consultQr).toHaveAttribute('src', /\/geo-consulting-website\/image\/wechat-consult\.jpg$/)
+  await expect(consultQr).toHaveAttribute('src', /\/souheng\/image\/wechat-consult\.jpg$/)
   expect(await consultQr.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0 && image.naturalHeight > 0)).toBe(true)
   await page.screenshot({ path: `output/playwright/p3.1/${testInfo.project.name}/wechat-consult-dialog.png` })
   await page.keyboard.press('Escape')
@@ -73,7 +73,7 @@ test('official account QR is rendered with a GitHub Pages-safe path', async ({ p
   await page.goto('about/', { waitUntil: 'networkidle' })
   const officialQr = page.locator('img[alt="搜衡科技微信公众号二维码"]').first()
   await expect(officialQr).toBeVisible()
-  await expect(officialQr).toHaveAttribute('src', /\/geo-consulting-website\/image\/wechat-official\.png$/)
+  await expect(officialQr).toHaveAttribute('src', /\/souheng\/image\/wechat-official\.png$/)
   expect(await officialQr.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth === 576 && image.naturalHeight === 572)).toBe(true)
 })
 

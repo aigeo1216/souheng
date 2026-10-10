@@ -26,7 +26,7 @@ export const brand = {
   },
   analytics: { provider: 'none' as const, measurementId: '' },
   seo: {
-    siteUrl: 'https://aigeo1216.github.io/geo-consulting-website/',
+    siteUrl: 'https://aigeo1216.github.io/souheng/',
     defaultTitle: 'AI 搜索增长与企业数字化服务｜搜衡科技',
     defaultDescription: '搜衡科技提供 SEO/GEO 优化、企业官网建设、内容矩阵运营及小程序服务，帮助企业提升线上可见性，完善咨询转化路径。',
   },

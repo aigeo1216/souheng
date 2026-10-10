@@ -27,8 +27,8 @@ jobs:
       - run: npm run typecheck
       - run: npm run generate
         env:
-          NUXT_APP_BASE_URL: /geo-consulting-website/
-          NUXT_PUBLIC_SITE_URL: https://aigeo1216.github.io/geo-consulting-website/
+          NUXT_APP_BASE_URL: /souheng/
+          NUXT_PUBLIC_SITE_URL: https://aigeo1216.github.io/souheng/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public

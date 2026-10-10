@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import { brand } from './app/config/brand'
 
-const baseURL = process.env.NUXT_APP_BASE_URL || '/geo-consulting-website/'
+const baseURL = process.env.NUXT_APP_BASE_URL || '/souheng/'
 const fixtureRoutes = [
   'home',
   'service-list',

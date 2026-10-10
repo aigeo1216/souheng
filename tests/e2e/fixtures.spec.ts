@@ -14,7 +14,7 @@ for (const slug of fixtures) {
     await page.goto(`__fixtures__/${slug}/`, { waitUntil: 'networkidle' })
     await expect(page.locator('h1')).toHaveCount(1)
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow')
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`/geo-consulting-website/__fixtures__/${slug}/$`))
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', new RegExp(`/souheng/__fixtures__/${slug}/$`))
     await expect(page.locator('header.site-header')).toBeVisible()
     await expect(page.locator('footer.footer')).toBeVisible()
 

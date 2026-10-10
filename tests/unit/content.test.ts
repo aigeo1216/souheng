@@ -12,8 +12,8 @@ describe('fixture content model', () => {
 
   it('builds canonical URLs below the GitHub Pages project path', () => {
     expect(buildCanonical(
-      'https://aigeo1216.github.io/geo-consulting-website/',
+      'https://aigeo1216.github.io/souheng/',
       '/__fixtures__/home/',
-    )).toBe('https://aigeo1216.github.io/geo-consulting-website/__fixtures__/home/')
+    )).toBe('https://aigeo1216.github.io/souheng/__fixtures__/home/')
   })
 })

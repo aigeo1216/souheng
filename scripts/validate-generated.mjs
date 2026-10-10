@@ -2,7 +2,7 @@ import { readFile, readdir, stat } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 const root = resolve('.output/public')
-const base = '/geo-consulting-website/'
+const base = '/souheng/'
 const indexableRoutes = [
   '/', '/services/', '/services/seo-geo-audit/', '/services/geo/', '/services/seo/', '/services/website-development/', '/services/content-strategy/', '/services/mini-program/',
   '/insights/', '/insights/what-is-geo/', '/insights/seo-vs-geo/', '/insights/geo-pricing/', '/insights/geo-measurement/',
