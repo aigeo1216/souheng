@@ -31,8 +31,14 @@ async function validateRoute(route, expectedRobots) {
     for (const href of hrefs) {
       if (!href.startsWith(base) || href.includes('/_nuxt/') || href.includes('_payload.json') || href.includes('#')) continue
       const relative = href.slice(base.length).replace(/^\/+|\/+$/g, '')
-      const target = relative ? resolve(root, relative, 'index.html') : resolve(root, 'index.html')
-      try { await stat(target) } catch { failures.push(`${label}: broken internal link ${href}`) }
+      const targets = relative
+        ? [resolve(root, relative), resolve(root, relative, 'index.html')]
+        : [resolve(root, 'index.html')]
+      try {
+        await Promise.any(targets.map(target => stat(target)))
+      } catch {
+        failures.push(`${label}: broken internal link ${href}`)
+      }
     }
   } catch (error) { failures.push(`${label}: generated HTML missing (${error.message})`) }
 }
