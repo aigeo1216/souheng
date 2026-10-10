@@ -1,0 +1,12 @@
+asset_id,page_route,page_type,section,image_purpose,visual_concept,aspect_ratio,target_width,target_height,prompt,negative_prompt,alt_text,priority,generation_status,review_status,file_path
+hero-home,/,home,hero,品牌主视觉,企业搜索可见性与内容路径,16:9,1536,864,浅色商务科技场景，企业信息在搜索与AI回答之间形成清晰路径，墨蓝蓝灰，左侧留白，无文字,乱码文字|Logo|虚构数据|霓虹,搜衡科技搜索增长主视觉,P0,prompt-ready,pending,
+service-geo,/services/geo/,service,overview,GEO服务视觉,清晰信息实体与AI检索场景,16:9,1536,864,浅色专业工作场景，信息关系与可核验来源，蓝灰墨蓝，右侧主体，无文字,机器人|地球|文字|虚构指标,GEO优化服务视觉,P0,prompt-ready,pending,
+insight-what-is-geo,/insights/what-is-geo/,article,cover,文章封面,生成式搜索中的企业信息理解,4:3,1200,900,编辑式科技插画，信息节点与搜索结果抽象关系，留白，无文字,乱码|Logo|数据看板,GEO知识文章封面,P0,prompt-ready,pending,
+service-seo,/services/seo/,service,overview,SEO服务视觉,企业官网结构与搜索发现,16:9,1536,864,网站信息架构与可发现路径，专业蓝灰，无文字,关键词堆砌|文字,企业官网SEO优化视觉,P1,planned,pending,
+service-website,/services/website-development/,service,overview,官网建设视觉,清晰企业官网与咨询路径,16:9,1536,864,现代企业网站工作场景和内容模块，无文字,设备Logo|乱码,企业官网建设与优化视觉,P1,planned,pending,
+service-content,/services/content-strategy/,service,overview,内容矩阵视觉,主题关系与内容组织,16:9,1536,864,编辑策略桌面与内容关系图形，无文字,图表数字|乱码,内容矩阵运营视觉,P1,planned,pending,
+service-mini,/services/mini-program/,service,overview,小程序视觉,移动端服务入口,16:9,1536,864,移动端服务流程与官网协同，无文字,商城|支付|乱码,小程序开发与运营视觉,P1,planned,pending,
+insight-seo-geo,/insights/seo-vs-geo/,article,cover,文章封面,SEO与GEO关系,4:3,1200,900,简洁双路径信息关系编辑插画，无文字,比较表文字|数据,SEO与GEO区别文章封面,P1,planned,pending,
+insight-pricing,/insights/geo-pricing/,article,cover,文章封面,范围与决策因素,4:3,1200,900,项目范围与评估工作台编辑插画，无文字,货币数字|乱码,GEO收费与预算文章封面,P2,planned,pending,
+insight-measurement,/insights/geo-measurement/,article,cover,文章封面,观察与复核,4:3,1200,900,搜索呈现观察与人工复核场景，无文字,虚构指标|仪表盘,GEO效果评估文章封面,P2,planned,pending,
+insight-citation,/insights/why-ai-does-not-cite-website/,article,cover,文章封面,官网可理解性,4:3,1200,900,网页信息清晰度与证据链编辑插画，无文字,AI文字|品牌Logo,官网未被AI引用文章封面,P2,planned,pending,
