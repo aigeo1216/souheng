@@ -1,0 +1,2 @@
+<template><nav class="pagination" aria-label="分页"><button type="button" disabled>‹</button><span aria-current="page">1</span><button type="button" disabled>›</button></nav></template>
+<style scoped>.pagination{display:flex;justify-content:center;gap:8px;margin-top:34px}.pagination>*{display:grid;width:36px;height:36px;place-items:center;border:1px solid var(--color-line);background:#fff}.pagination span{border-color:var(--color-primary);color:#fff;background:var(--color-primary)}.pagination button:disabled{color:#b8c1c8}</style>

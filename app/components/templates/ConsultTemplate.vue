@@ -1,0 +1,12 @@
+<script setup lang="ts">
+import type { FixturePage } from '~/types/content'
+defineProps<{ page: FixturePage }>()
+const { open } = useWechatConsult()
+const { track } = useAnalytics()
+function openConsult(event: MouseEvent) {
+  track({ event_name: 'cta_click', placement: 'consult-page' })
+  open({ placement: 'consult-page', trigger: event.currentTarget as HTMLElement })
+}
+</script>
+<template><div><div class="site-container"><UiPageTitle :title="page.h1" :subtitle="page.subtitle" centered :fixture="page.status === 'fixture'"/><UiBreadcrumbs :items="page.breadcrumbs"/></div><section class="site-container section-space"><div class="contact-layout"><div><p class="eyebrow">CONTACT METHODS</p><h2>主动扫码咨询</h2><p class="intro">微信二维码接入后，用户可自主扫码沟通；本站不自动获取微信身份或聊天记录。</p><div v-if="page.contactMethods?.length" class="methods"><article v-for="method in page.contactMethods" :key="method.label"><span>{{ method.label.slice(0,1) }}</span><div><h3>{{ method.label }}</h3><p>{{ method.value }}</p></div></article></div><p v-else class="contact-empty">咨询二维码待接入；本页不收集个人信息。</p></div><div class="form-placeholder"><span class="fixture-badge">WECHAT CONSULT</span><h2>微信咨询</h2><p>扫码仅表示用户产生咨询意向，不代表已经添加微信或完成咨询。</p><button class="btn btn-primary" type="button" @click="openConsult">打开微信咨询</button></div></div><div class="main-aside mt-10"><div class="detail-panel"><ContentRichSections :sections="page.sections"/></div><ContentFaqList :items="page.faq"/></div></section></div></template>
+<style scoped>.contact-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}.contact-layout h2{margin:8px 0 10px;color:var(--color-heading);font-size:28px}.intro{color:var(--color-muted)}.contact-empty{margin-top:27px;padding:16px;border-left:3px solid #e2a937;background:#fff9e9;color:#745b25}.methods{display:grid;gap:12px;margin-top:27px}.methods article{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:center;padding:14px;border:1px solid var(--color-line)}.methods article>span{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;color:#fff;background:var(--color-primary)}.methods h3{color:var(--color-heading);font-size:14px}.methods p{color:var(--color-muted);font-size:12px}.form-placeholder{padding:30px;border-top:3px solid var(--color-primary);background:var(--color-tint)}.form-placeholder>p{margin-bottom:20px;color:var(--color-muted)}@media(max-width:767px){.contact-layout{grid-template-columns:1fr;gap:34px}.contact-layout h2{font-size:23px}.form-placeholder{padding:24px 18px}}</style>

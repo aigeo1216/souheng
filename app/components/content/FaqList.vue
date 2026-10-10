@@ -1,0 +1,3 @@
+<script setup lang="ts">import type { FaqItem } from '~/types/content'; defineProps<{ items?: FaqItem[] }>()</script>
+<template><section v-if="items?.length" class="faq"><h2>常见问题</h2><details v-for="item in items" :key="item.question"><summary>{{ item.question }}</summary><p>{{ item.answer }}</p></details></section></template>
+<style scoped>.faq{margin-top:38px}.faq>h2{margin-bottom:14px;color:var(--color-heading);font-size:24px}.faq details{border-top:1px solid var(--color-line);padding:15px 0}.faq summary{cursor:pointer;color:var(--color-heading);font-weight:600}.faq p{margin-top:10px;color:var(--color-muted)}</style>

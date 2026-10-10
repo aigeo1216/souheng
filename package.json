@@ -1,0 +1,37 @@
+{
+  "name": "geo-consulting-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "npx serve .output/public",
+    "typecheck": "nuxt typecheck",
+    "test": "npm run typecheck && npm run test:unit",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --update-snapshots",
+    "test:static": "node scripts/validate-generated.mjs",
+    "test:quality": "npm run generate && npm run test:static && npm run test:e2e"
+  },
+  "dependencies": {
+    "nuxt": "4.6.1",
+    "vue": "3.5.43",
+    "vue-router": "5.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/vite": "4.3.3",
+    "@vue/test-utils": "2.4.6",
+    "happy-dom": "20.0.10",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "4.0.17",
+    "vue-tsc": "3.2.5"
+  }
+}

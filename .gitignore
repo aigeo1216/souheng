@@ -1,0 +1,20 @@
+# P0 reference captures contain third-party material and stay local.
+research/raw-pages/
+research/screenshots/
+/research/
+
+# Local browser automation state and diagnostics.
+.playwright-cli/
+output/playwright/
+
+# Nuxt / Node
+node_modules/
+.nuxt/
+.output/
+/dist
+.DS_Store
+/scripts/p0_crawl.py
+.env
+test-results/
+playwright-report/
+output/p2-visual/

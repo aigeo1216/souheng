@@ -1,0 +1,5 @@
+<script setup lang="ts">import type { CardItem } from '~/types/content'; defineProps<{ item: CardItem; compact?: boolean }>()</script>
+<template><component :is="item.path ? 'NuxtLink' : 'article'" :to="item.path" class="card service-card"><div class="placeholder-art art"><span aria-hidden="true">{{ item.title.slice(0,1) }}</span></div><div class="body"><p v-if="item.category" class="eyebrow">{{ item.category }}</p><h2>{{ item.title }}</h2><p>{{ item.summary }}</p><span class="learn">查看服务 <b aria-hidden="true">→</b></span></div></component></template>
+<style scoped>
+.service-card{height:100%}.art{display:grid;aspect-ratio:16/9;place-items:center}.art span{position:relative;z-index:1;color:rgb(255 255 255 / 82%);font-size:46px;font-weight:300}.body{padding:22px}.body h2{margin:7px 0 9px;color:var(--color-heading);font-size:17px;font-weight:600}.body p:not(.eyebrow){min-height:44px;color:var(--color-muted)}.learn{display:inline-flex;margin-top:16px;color:var(--color-primary);font-size:13px}.learn b{margin-left:6px}
+</style>

@@ -1,0 +1,5 @@
+<script setup lang="ts">import type { CardItem } from '~/types/content'; defineProps<{ items?: CardItem[]; title?: string }>()</script>
+<template><aside v-if="items?.length" class="related"><h2>{{ title || '相关推荐' }}</h2><component :is="item.path ? 'NuxtLink' : 'article'" v-for="(item,index) in items" :key="item.slug" :to="item.path"><span>{{ String(index+1).padStart(2,'0') }}</span><div><h3>{{ item.title }}</h3><p>{{ item.summary }}</p></div></component></aside></template>
+<style scoped>
+.related{padding:24px;border-top:3px solid var(--color-primary);background:var(--color-tint)}.related>h2{margin-bottom:7px;color:var(--color-heading);font-size:18px}.related article{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid var(--color-line)}.related article:last-child{border:0}.related article>span{color:#aac0d5;font-size:20px}.related h3{color:var(--color-heading);font-size:14px;font-weight:600}.related p{margin-top:5px;color:var(--color-muted);font-size:12px;line-height:1.5}
+</style>
